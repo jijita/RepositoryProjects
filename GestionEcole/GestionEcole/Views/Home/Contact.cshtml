@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    
+</hgroup>
+<div class="col-xs-12">
+    <div class="col-xs-6" id="map">
+
+
+    </div>
+
+    <div class="col-xs-6 text-center">
+        <section class="contact">
+            <header>
+                <h3>Phone</h3>
+            </header>
+            <p class="">
+                <span class="">Tel:</span>
+                <span>425.555.0100</span>
+            </p>
+       
+        </section>
+
+        <section class="contact">
+            <header>
+                <h3>Email</h3>
+            </header>
+            <p class="">
+                <span class="">Contact 1: </span>
+                <span><a href="mailto:jihen.arem@gmail.com">jihen.arem@gmail.com</a></span>
+            </p>
+            <p class="">
+                <span class="">Contact 2: </span>
+                <span><a href="mailto:cedricgfont@gmail.com">cedricgfont@gmail.comm</a></span>
+            </p>
+
+        </section>
+
+        <section class="contact">
+            <header>
+                <h3>Address</h3>
+            </header>
+            <p>
+                255 Cremazie ISI<br />
+
+            </p>
+            <header>Facebook Link</header>
+            <div class="">
+                <a href="https://www.facebook.com/AremTechnology?fref=ts"> <img class="img-responsive center-block " src="~/Images/images.jpg" /> </a>
+            </div>
+        </section>
+    </div>
+</div>
+@section Scripts {
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTYRuu6Sqqh3AYCahw56_z28rJfBQB7Oc&sensor=true">
+</script>
+
+    <script type="text/javascript">
+    function initialize() {
+        var mapOptions = {
+            center: new google.maps.LatLng(45.5440916, -73.6402476),
+            zoom: 10
+        };
+        var map = new google.maps.Map(document.getElementById("map"),
+            mapOptions);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+    }

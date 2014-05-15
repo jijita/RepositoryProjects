@@ -1,0 +1,20 @@
+﻿@{
+    try
+    {
+        if (!User.IsInRole("Admin"))
+        {
+            Layout = "~/Views/Shared/_Layout.cshtml";
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+        }
+    }
+    catch
+    {
+
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    
+    }
+}

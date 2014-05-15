@@ -1,0 +1,26 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <text>
+        
+            <div class="col-sm-4 col-xs-7 col-md-3">
+                <p class="navbar-text pull-right">
+                    @GestionEcole.Resources.Views.Home.Index.Hello, @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })!
+                </p>
+                
+                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <a class="btn btn-primary navbar-btn navbar-left" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                }
+            </div>
+       
+
+    </text>
+}
+else
+{
+    <div class="btn-group navbar-right">
+        @Html.ActionLink(GestionEcole.Resources.Views.Home.Index.Register, "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary navbar-btn" })
+        @Html.ActionLink(GestionEcole.Resources.Views.Home.Index.Login, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-primary navbar-btn" })
+    </div>
+}

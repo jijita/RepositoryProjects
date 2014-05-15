@@ -1,0 +1,39 @@
+﻿@using GestionEcole.Resources.Views.Administration; 
+@using GestionEcole.Resources.Views.Shared;
+
+@{
+    int CombienDePage = ViewBag.CombienDePage;
+}
+
+<h2>@Index.FirstH2</h2>
+
+<div class="col-xs-8 col-xs-offset-2">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>@Index.TableHeader</th>
+                <th></th>
+                <th><a class="btn btn-default" title=@TitreBtn.NewIcon href="/Administration/AddRole"><span class="glyphicon glyphicon-plus"></span></a></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var role in Model)
+            {
+                <tr>
+                    <td>
+                        <span class="">@role</span>
+                    </td>
+
+                    <td>
+                        <a class="btn btn-default" title=@TitreBtn.DetailsIcon href="/Administration/DetailsRole?role=@role"><span class="glyphicon glyphicon-list"></span></a>
+                    </td>
+
+                    <td>
+                        <a class="btn btn-default" title=@TitreBtn.DeleteIcon href="/Administration/DeleteRole?role=@role"><span class="glyphicon glyphicon-minus"></span></a>
+                    </td>
+                </tr>
+            }
+        </tbody>        
+    </table>
+</div>

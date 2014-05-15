@@ -1,0 +1,35 @@
+﻿@using GestionEcole.Resources.Views.Account;
+@model GestionEcole.Models.RegisterExternalLoginModel
+@{
+    ViewBag.Title = ExternalLoginConfirmation.ViewBagTitle;
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ExternalLoginConfirmation.h2 @ViewBag.ProviderDisplayName @ExternalLoginConfirmation.h2Suite</h2>
+</hgroup>
+
+@using (Html.BeginForm("ExternalLoginConfirmation", "Account", new { ReturnUrl = ViewBag.ReturnUrl })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>@ExternalLoginConfirmation.legend</legend>
+        <p>
+            @ExternalLoginConfirmation.p
+        </p>
+        <ol>
+            <li class="name">
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </li>
+        </ol>
+        @Html.HiddenFor(m => m.ExternalLoginData)
+        <input type="submit" value="Register" />
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

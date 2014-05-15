@@ -1,0 +1,151 @@
+﻿@using GestionEcole.Resources.Views.Shared;
+@using GestionEcole.Resources.Views.Matiere;
+@model GestionEcole.Models.Matiere
+
+@{
+    ViewBag.Title = TitreBtn.DetailsIcon;
+
+    var LesCours = ViewBag.lstCoursInMatiere;
+    //a ajouter
+    List<GestionEcole.Models.TypeEvaluation> sesTypeEvaluation = ViewBag.typeEval;
+    List<GestionEcole.Models.Cours> sesCours = ViewBag.coursMatiere;
+}
+
+
+<h2>
+    @ViewBag.Title
+    <a class="btn btn-default" title=@TitreBtn.EditIcon href="/Matiere/Edit?id=@Model.MatiereId"><span class="glyphicon glyphicon-pencil"></span></a>
+</h2>
+
+<div class="col-xs-8 col-xs-offset-2">
+    <div class="list-group">
+        <div class="list-group-item">
+            <h4 class="list-group-item-heading">@Html.DisplayNameFor(model => model.Titre)</h4>
+            <p class="list-group-item-text">@Html.DisplayFor(model => model.Titre)</p>
+        </div>
+
+        <div class="list-group-item">
+            <h4 class="list-group-item-heading">@Html.DisplayNameFor(model => model.Description)</h4>
+            <p class="list-group-item-text">@Html.DisplayFor(model => model.Description)</p>
+        </div>
+    </div>
+</div>
+
+@if (LesCours != null)
+{
+     <legend>
+                    @GestionEcole.Resources.Views.Matiere.Index.TableTitle @sesCours[0].Enseignant.Nom @sesCours[0].Enseignant.Prenom
+     </legend>
+    
+    <div class="col-xs-10 col-xs-offset-1">
+
+        <table class="table table-responsive table-striped">
+            <thead>
+               
+                <tr>
+                    <th>
+                        @GestionEcole.Resources.Views.Matiere.Index.ClassStart
+                    </th>
+
+                    <th>
+                        @GestionEcole.Resources.Views.Matiere.Index.ClassEnd
+                    </th>
+
+                    <th>
+                        @GestionEcole.Resources.Views.Matiere.Index.ClassDescription
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in LesCours)
+                {
+                    <tr>
+                        <td>
+                            @item.DateDebut
+                        </td>
+                        <td>
+                            @item.DateFin
+                        </td>
+                        <td>
+                            @item.Description
+                        </td>
+                        <td>
+                            @Html.ActionLink(@GestionEcole.Resources.Views.Matiere.Index.BtnListStudents, "AfficheEtudiantsCours", "Cours", new { coursId = item.CoursId }, new { @class = "btn btn-info" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+    @*// Aajouter*@
+
+    <legend>@Index.DifferentTypeOfEvaluation</legend>
+    @if (sesTypeEvaluation.Count > 0)
+    {
+        <div class="col-xs-7 col-xs-offset-2">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Type Evaluation</th>
+                        <th>Ponderation</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var t in sesTypeEvaluation)
+                    {
+                        <tr>
+                            <td>@t.Type</td>
+                            <td>@t.Ponderation</td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    }
+
+    <legend>@Index.AllTaughtClasses</legend>
+
+    @if (sesCours.Count > 0)
+    {
+        <div class="col-xs-7 col-xs-offset-2">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date Debut</th>
+                        <th>Date Fin</th>
+                        <th>Description</th>
+                        <th>Enseignant</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var c in sesCours)
+                    {
+                        <tr>
+                            <td>@c.DateDebut</td>
+                            <td>@c.DateFin</td>
+                            <td>@c.Description</td>
+                            <td>@c.Enseignant.Nom @c.Enseignant.Prenom</td>
+
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    }
+
+    <div class="col-xs-12">
+        <a class="btn btn-lg btn-danger" title=@TitreBtn.BackIcon href="/Matiere"><span class="glyphicon glyphicon-arrow-left"></span></a>
+    </div>

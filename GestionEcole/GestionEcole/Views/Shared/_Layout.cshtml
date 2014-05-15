@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title Page Users</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="colGris">
+    <div id="container" class="container">
+        <div class="btn btn-group pull-right">
+            <a href="/Langue/FromEnglishToFrench" class="btn btn-default" name="btn_francais"><img class="img-responsive" src="~/Images/france.png" /></a>
+            <a href="/Langue/FromFrenchToEnglish" class="btn btn-default" name="btn_anglais"><img class="img-responsive" src="~/Images/united_kingdom.png" /></a>
+        </div>
+        @Html.Partial("_LoginPartial")
+        <div class="visible-xs pull-left col-xs-8">
+            <a class="btn btn-lg btn-primary" title=@GestionEcole.Resources.Views.Home.Index.HomeLink href="/Home"><span class="glyphicon glyphicon-home"></span></a>
+        </div>
+        <img src="~/Images/Banner1.jpg" class="col-xs-12 img-responsive" />
+
+        <div class="col-xs-12" id="header">
+
+            <div class="row">
+                <section id="login"></section>
+            </div>
+
+            <nav class="navbar navbar-collapse nav-justified bg-danger" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header navbar-btn hidden-xs">
+                        <a class="btn btn-lg btn-primary" title=@GestionEcole.Resources.Views.Home.Index.HomeLink href="/Home"><span class="glyphicon glyphicon-home"></span></a>
+                    </div>
+
+                    <div class="text-center navbar-left visible-xs ">
+                        <ul class="nav navbar-nav btn-group-lg" id="menu">
+                            <li>@Html.ActionLink(GestionEcole.Resources.Views.Home.Index.TeachersLink, "Index", "Enseignant", new { }, new { @class = " noir btn-lg" })</li>
+                            <li>@Html.ActionLink(GestionEcole.Resources.Views.Home.Index.StudentsLink, "Index", "Etudiant", new { }, new { @class = "noir btn-lg" })</li>
+                            <li>@Html.ActionLink(GestionEcole.Resources.Views.Matiere.Index.TheClasses, "Index", "Matiere", new { }, new { @class = "noir btn-lg" })</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home", new { }, new { @class = "noir btn-lg" })</li>
+
+
+                        </ul>
+                    </div>
+
+                    <div class="col-md-offset-2 col-xs-offset-0 navbar-left hidden-xs">
+                        <ul class="nav navbar-nav" id="menu">
+                            <li>@Html.ActionLink(GestionEcole.Resources.Views.Home.Index.TeachersLink, "Index", "Enseignant", new { }, new { @class = "text-danger btn-lg" })</li>
+                            <li>@Html.ActionLink(GestionEcole.Resources.Views.Home.Index.StudentsLink, "Index", "Etudiant", new { }, new { @class = "text-danger btn-lg" })</li>
+                            <li>@Html.ActionLink(GestionEcole.Resources.Views.Matiere.Index.TheClasses, "Index", "Matiere", new { }, new { @class = "text-danger btn-lg" })</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home", new { }, new { @class = "text-danger btn-lg" })</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="col-xs-12 bleuGris" id="body">
+            @RenderSection("featured", required: false)
+
+            <section>
+                @RenderBody()
+            </section>
+        </div>
+
+
+        <div id="footer" class="col-xs-12 text-center  bg-primary">
+            <p>&copy; @DateTime.Now.Year - @GestionEcole.Resources.Views.Home.Index.Application</p>
+
+            <h4>Jihene & Cedric</h4>
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

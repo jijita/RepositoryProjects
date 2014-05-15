@@ -1,0 +1,70 @@
+﻿@using GestionEcole.Resources.Views.Home;
+@using GestionEcole.Resources.Views.Shared;
+
+@{
+    ViewBag.Title = Index.Title;
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+
+            <div class="row hidden-xs">
+                <div class="col-xs-1">
+                    &nbsp;
+                </div>
+                <div class="col-md-8 col-xs-10 text-justify text-warning">
+                    <h1 class="text-danger">@Index.h1</h1>
+                    <h3 class="text-success">@Index.H3</h3>
+                    <p class="">
+                        @Index.LoremIpsum
+                    </p>
+                </div>
+                <div class="col-xs-3 hidden-xs hidden-sm">
+                    <div class=" col-xs-8 col-xs-offset-2">
+                        <ul class="list-group nav nav-tabs nav-stacked text-center" id="menu">
+                          
+                            <li class="list-group-item-danger">@Html.ActionLink(Index.TeachersLink, "Index", "Enseignant")</li>
+                            <li class="list-group-item-info">@Html.ActionLink(Index.StudentsLink, "Index", "Etudiant")</li>
+                            <li class="list-group-item-danger">@Html.ActionLink(Index.CoursesLink, "Index", "Matiere")</li>
+                            <li class="list-group-item-info">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            @*@if (User.IsInRole("Admin"))
+                            {*@
+                                <li class="list-group-item-info">@Html.ActionLink(Index.AdministrationLink, "Index", "Administration")</li>
+                            @*}*@
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+}
+
+<div class="row col-xs-12 hidden-xs">
+    <div class="col-xs-1">
+        &nbsp;
+    </div>
+    <div class="col-md-7 col-xs-10 text-justify text-warning">
+        
+        <h3 class="text-success">@Index.H3Objectives</h3>
+
+            <p class="">
+                @Index.LoremIpsum
+            </p>       
+    </div>
+
+    <div class="col-md-4 col-xs-12 text-justify text-warning espace">
+        <div class="form-group col-md-12 col-md-offset-0 col-xs-8 col-xs-offset-2">
+            <img src="~/Images/ecole.gif" class="img-responsive" />
+        </div>
+        <div>
+            &nbsp;
+        </div>
+        <div class="form-group col-xs-offset-5 col-md-offset-4">
+
+            <a href="https://www.facebook.com/AremTechnology?fref=ts"> <img class="img-responsive " src="~/Images/images.jpg" /> </a>
+
+        </div>
+
+    </div>
+</div>

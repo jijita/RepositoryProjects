@@ -1,0 +1,40 @@
+﻿@using GestionEcole.Resources.Views.Shared;
+
+@model GestionEcole.Models.Cours
+
+@{
+    ViewBag.Title = @TitreBtn.DeleteIcon;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<fieldset>
+    <legend>@GestionEcole.Resources.Views.Cours.Index.IndexTitle</legend>
+
+    <div class="col-xs-8 col-xs-offset-2">
+        <div class="list-group">
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">@Html.DisplayNameFor(model => model.DateDebut)</h4>
+                <p class="list-group-item-text">@Html.DisplayFor(model => model.DateDebut)</p>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">@Html.DisplayNameFor(model => model.DateFin)</h4>
+                <p class="list-group-item-text">@Html.DisplayFor(model => model.DateFin)</p>
+            </div>
+
+            <div class="list-group-item">
+                <h4 class="list-group-item-heading">@Html.DisplayNameFor(model => model.Description)</h4>
+                <p class="list-group-item-text">@Html.DisplayFor(model => model.Description)</p>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <div class="btn-group btn-group-lg col-xs-12">
+        <button type="submit" title=@TitreBtn.DeleteIcon class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+        <a class="btn btn-danger" title=@TitreBtn.BackIcon href="/Cours"><span class="glyphicon glyphicon-arrow-left"></span></a>
+    </div>
+}
