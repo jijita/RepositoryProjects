@@ -71,27 +71,27 @@ Directives d'utilisation:
 
     1-  L'application est disponible en français et en anglais : veuillez choisir une langue. 
     
-    2-  Il faut créér un client: renter un email + un mot de passe valide : (se souvenir du mot de passe) Ce client peut          voir seulement notre page home. On a limité l'accés pour des raisons de sécurité.
+    2-  Il faut créér un client: renter un email + un mot de passe valide : (se souvenir du mot de passe) Ce client peut voir seulement notre page home. On a limité l'accés pour des raisons de sécurité.
     
     3-  Il faut se déconnecter maintenant et rentrer en tant que Administrateur Username: Admin - mot de passe :abc123...
     
-    4-  Une fois admin il peut aller sur sa section administration: En tant que Admin changer le statut du client à un            etudiant.
+    4-  Une fois admin il peut aller sur sa section administration: En tant que Admin changer le statut du client à un etudiant.
     
         J'ai séparé la base donnée de sécurité de la base de donnée de mon application pour des fins de sécurité.
         
-    5-  Toujours en tant que admin : Il faut maintenant aller dans la rubrique Etudiant, enregistrer ce client là pour            devenir un étudiant avec son mail. Le client est devenu un Étudiant maintenant.
+    5-  Toujours en tant que admin : Il faut maintenant aller dans la rubrique Etudiant, enregistrer ce client là pour devenir un étudiant avec son mail. Le client est devenu un Étudiant maintenant.
     
-    6-  Toujours en tant que admin : Créér maintenant des matieres au moins deux matieres (exemple php, c++)...et valider         votre choix 
+    6-  Toujours en tant que admin : Créér maintenant des matieres au moins deux matieres (exemple php, c++)...et valider votre choix 
     
     7-  Toujours en tant que admin : Créér des types d'évaluations exemple (Quiz1 , Quiz final).
     
-    8-  Une fois que ces données sont rentrées il ne reste plus qu'à rajouter un professeur et rajouter aussi des cours           enseignée par ces proffesseurs là.
+    8-  Une fois que ces données sont rentrées il ne reste plus qu'à rajouter un professeur et rajouter aussi des cours enseignée par ces proffesseurs là.
     
         Pour ce faire, faire refaire l'étape 2 - 3 - 4 et 5 mais pour enseignant au lieu d'un étudiant.
         
     9-  Associer des cours à l'enseignant dans la rubrique cours. 
     
-    10- Se déconnecter d'admin puis on se connecte en tant que Etudiant. L'etudiant peut rentrer dans la rubrique des            étudiants, il ne peut rentrer que sur son profile, il regarde alors ses données: cours, matiere, notes si c est          disponible.
+    10- Se déconnecter d'admin puis on se connecte en tant que Etudiant. L'etudiant peut rentrer dans la rubrique des étudiants, il ne peut rentrer que sur son profile, il regarde alors ses données: cours, matiere, notes si c'est disponible.
     
         NB: Un cours c'est une saison exemple saison d'hiver. On peut avoir plusieurs cours dans une matiere.
         
@@ -99,9 +99,9 @@ Directives d'utilisation:
         
         L'étudiant peut consulter les matières offert, et les détails des matieres, dans la rubrique des matieres.
         
-    11- Se déconnecter d'étudiant. Se connecter en tant que enseignant. L'enseignant rentre sur sa rubrique d'enseignant,         il ne peut acceder qu'à son profil.
+    11- Se déconnecter d'étudiant. Se connecter en tant que enseignant. L'enseignant rentre sur sa rubrique d'enseignant, il ne peut acceder qu'à son profil.
         
-        L'enseignant peut consulter ses cours et dans chaque cours il peut voir sa liste d'étudiants. Il peut alors soit          marquer la présence au cours pour chaque étudiant, soit le noter.
+        L'enseignant peut consulter ses cours et dans chaque cours il peut voir sa liste d'étudiants. Il peut alors soit marquer la présence au cours pour chaque étudiant, soit le noter.
         
     12- Une fois noté par l'enseignant on se déconnecte de l'enseignant. 
         
