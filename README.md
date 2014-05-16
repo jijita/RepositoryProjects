@@ -76,7 +76,6 @@ Directives d'utilisation:
     3-  Il faut se déconnecter maintenant et rentrer en tant que Administrateur Username: Admin - mot de passe :abc123...
     
     4-  Une fois admin il peut aller sur sa section administration: En tant que Admin changer le statut du client à un etudiant.
-    
         J'ai séparé la base donnée de sécurité de la base de donnée de mon application pour des fins de sécurité.
         
     5-  Toujours en tant que admin : Il faut maintenant aller dans la rubrique Etudiant, enregistrer ce client là pour devenir un étudiant avec son mail. Le client est devenu un Étudiant maintenant.
@@ -86,7 +85,6 @@ Directives d'utilisation:
     7-  Toujours en tant que admin : Créér des types d'évaluations exemple (Quiz1 , Quiz final).
     
     8-  Une fois que ces données sont rentrées il ne reste plus qu'à rajouter un professeur et rajouter aussi des cours enseignée par ces proffesseurs là.
-    
         Pour ce faire, faire refaire l'étape 2 - 3 - 4 et 5 mais pour enseignant au lieu d'un étudiant.
         
     9-  Associer des cours à l'enseignant dans la rubrique cours. 
