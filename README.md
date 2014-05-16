@@ -3,7 +3,11 @@ Gestion d'une Ecole
 
 Ce projet gère plusieurs volets:
 
-Gestion des inscriptions des Étudiants Gestion de la présence des Étudiants Gestion de la notation des Étudiants Gestion de la distribution des cours aux Enseignants Gestion des matières Gestion des niveaux d’utilisateurs
+    -Gestion des inscriptions des Étudiants 
+    -Gestion de la présence des Étudiants 
+    -Gestion de la notation des Étudiants 
+    -Gestion de la distribution des cours aux Enseignants
+    -Gestion des matières Gestion des niveaux d’utilisateurs
 
 Au niveau Serveur :
 
