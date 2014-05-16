@@ -64,8 +64,11 @@ Développements à-venir:
 Directives d'utilisation:
 
     1-  L'application est disponible en français et en anglais : veuillez choisir une langue. 
+    
     2-  Il faut créér un client: renter un email + un mot de passe valide : (se souvenir du mot de passe) Ce client peut          voir seulement notre page home. On a limité l'accés pour des raisons de sécurité.
-     3-  Il faut se déconnecter maintenant et rentrer en tant que Administrateur Username: Admin - mot de passe : abc123...
+    
+    3-  Il faut se déconnecter maintenant et rentrer en tant que Administrateur Username: Admin - mot de passe :abc123...
+    
     4-  Une fois admin il peut aller sur sa section administration: En tant que Admin changer le statut du client à un            etudiant.
     
         J'ai séparé la base donnée de sécurité de la base de donnée de mon application pour des fins de sécurité.
@@ -83,15 +86,21 @@ Directives d'utilisation:
     9-  Associer des cours à l'enseignant dans la rubrique cours. 
     
     10- Se déconnecter d'admin puis on se connecte en tant que Etudiant. L'etudiant peut rentrer dans la rubrique des            étudiants, il ne peut rentrer que sur son profile, il regarde alors ses données: cours, matiere, notes si c est          disponible.
+    
         NB: Un cours c'est une saison exemple saison d'hiver. On peut avoir plusieurs cours dans une matiere.
+        
         L'étudiant s'inscrit à un cours . Il s'ajoute automatiquement à sa liste de cours.
+        
         L'étudiant peut consulter les matières offert, et les détails des matieres, dans la rubrique des matieres.
         
     11- Se déconnecter d'étudiant. Se connecter en tant que enseignant. L'enseignant rentre sur sa rubrique d'enseignant,         il ne peut acceder qu'à son profil.
+        
         L'enseignant peut consulter ses cours et dans chaque cours il peut voir sa liste d'étudiants. Il peut alors soit          marquer la présence au cours pour chaque étudiant, soit le noter.
         
     12- Une fois noté par l'enseignant on se déconnecte de l'enseignant. 
+        
         On se reconnecte avec l'étudiant afin de vérifier si il a reçu ses notes.
+       
         Eh oui ! il est noté il peut voir sa moyenne, lorsqu'il rentre sur son profil, et même les détails de ses notes.
     
         Eh voilà j'éspère que ça été bien exliqué!
