@@ -14,6 +14,7 @@ Au niveau Serveur :
   Environnement d’exécution
 
         .Net 4.5 
+        
         SQL Server Express
 
   Environnement de développement
@@ -52,6 +53,7 @@ Au niveau Optimisation:
 Réalisation :
 
         Les besoins  de l’applications ont été satisfaits. L’application est désormais fonctionnelle sur le site.
+        
         Mise en place de la sécurité a été gérée sur tous les niveaux.
     
 Développements à-venir:
