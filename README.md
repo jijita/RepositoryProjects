@@ -14,66 +14,58 @@ Au niveau Serveur :
   Environnement d’exécution
 
         .Net 4.5 
-
         SQL Server Express
 
   Environnement de développement
 
          ASP.NET MVC 4
-
+         
          Entity FrameWork
+          
 Au niveau Client
 
-  HTML5 – CSS3
-
-  Bootstrap 3
-
-  Modernizr
-
-  JQuery
+        HTML5 – CSS3
+      
+        Bootstrap 3
+      
+        Modernizr
+      
+        JQuery
+        
 Au niveau Sécurité:
 
 Sécurité d’authentification
 
-  Login et Mot de passe encrypté (RSA)
+        Login et Mot de passe encrypté (RSA)
+      
+        Identification formulaire de Windows
+        
+        Sécurité des formulaires
 
-  Identification formulaire de Windows
-Sécurité des formulaires
-
-  Sécurité anti-injection ( XSS)
-
-  Validation stricte des champs
-
-  Sécurité Anti-contrefaçon(CSRF)
-
-  Mot de passe encrypté(RSA)
-
-  Accessibilité par niveau basée sur la White-List
+        
 Au niveau Optimisation:
 
-  Regroupement des flux (Bundles)
-
-  Mise en place du Caching
+        Regroupement des flux (Bundles)
+     
+        Mise en place du Caching
+      
 Réalisation :
 
-  Les besoins  de l’applications ont été satisfaits. L’application est désormais fonctionnelle sur le site.
-
-  Mise en place de la sécurité a été gérée sur tous les niveaux.
+        Les besoins  de l’applications ont été satisfaits. L’application est désormais fonctionnelle sur le site.
+        Mise en place de la sécurité a été gérée sur tous les niveaux.
+    
 Développements à-venir:
 
-  Gestion de paiement des frais d’admission.
-
-  Forum de discussion entre professeurs, étudiants et administration.
+        Gestion de paiement des frais d’admission.
+     
+        Forum de discussion entre professeurs, étudiants et administration.
   
 
 Directives d'utilisation:
 
     1-  L'application est disponible en français et en anglais : veuillez choisir une langue. 
-    
     2-  Il faut créér un client: renter un email + un mot de passe valide : (se souvenir du mot de passe) Ce client peut          voir seulement notre page home. On a limité l'accés pour des raisons de sécurité.
-    
-    3-  Il faut se déconnecter maintenant et rentrer en tant que Administrateur Username: Admin - mot de passe : abc123...
-    
+     3-  Il faut se déconnecter maintenant et rentrer en tant que Administrateur Username: Admin - mot de passe : abc123...
     4-  Une fois admin il peut aller sur sa section administration: En tant que Admin changer le statut du client à un            etudiant.
     
         J'ai séparé la base donnée de sécurité de la base de donnée de mon application pour des fins de sécurité.
